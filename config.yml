@@ -1,6 +1,4 @@
 ---
-isDeveloper  : true
-
 ## 網站資訊
 
 baseURL       : https://bwaycer.github.io/blog/
@@ -51,10 +49,9 @@ relativeURLs : true
 
 preserveTaxonomyNames: true
 paginate: 3
-disqusShortname: shortname
-googleAnalytics: ""
 
 params:
+    isDeveloper  : true
 
     # `meta` 元素標籤的描述，當內容頁無值時使用的預設描述
     description          : 希望我的旅途，能引領你翱翔，或許默默贊同，或許熱烈迴響。
