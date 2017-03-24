@@ -58,22 +58,4 @@ params:
 
     # 是否顯示預估閱讀時間（`ReadingTime` 由 Hogo 內建，好特別的功能）
     includeReadingTime   : true
-
-
-# 設定導覽行的項目
-# 其允許在文字前添加個 font awesome 圖示字型
-
-menu:
-
-    main:
-
-        - name       : 關於我
-          identifier : fa fa-user-o
-          url        : https://bwaycer.github.io/about
-          weight     : 1
-
-        - name       : 標籤
-          identifier : fa fa-tags
-          url        : /categories
-          weight     : 2
 ...

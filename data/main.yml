@@ -34,6 +34,24 @@ intro:
 
 
 
+# 設定導覽行的項目
+# 其允許在文字前添加個 font awesome 圖示字型
+
+menu:
+
+    main:
+
+        - name       : 關於我
+          identifier : fa fa-user-o
+          url        : https://bwaycer.github.io/about
+          weight     : 1
+
+        - name       : 標籤
+          identifier : fa fa-tags
+          url        : /categories
+          weight     : 2
+
+
 # 設定最新文章顯示數量，可選值，會顯示於側邊欄
 # 預設值： 5
 

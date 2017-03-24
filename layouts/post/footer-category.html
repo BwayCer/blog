@@ -4,19 +4,18 @@
         {{ $categoryCount := (len .Params.categories) }}
 
         <!--
-            Set the title before displaying the categories associated with this post.
-            The title will use the variables from the Categories menu set in the Config.
-            If the Categories menu was not set then use the default values instead.
+            文章的 `categories` 關聯設定。
+            若未在 `.Site.Data.main` 裡設置 `categories` 選項將使用預設值。
         -->
         {{ if ge $categoryCount 1 }}
             <li>
-                {{ $categoryMenu := (where .Site.Menus.main "Name" (i18n "category") ) }}
+                {{ $categoryMenu := (where .Site.Data.main.menu.main "name" (i18n "category") ) }}
                 {{ if ne (len $categoryMenu) 0 }}
                     {{ $categoryMenu := index $categoryMenu 0 }}
 
-                    {{ $.Scratch.Set "categoryUrl" (add $categoryMenu.URL "/") }}
+                    {{ $.Scratch.Set "categoryUrl" (add $categoryMenu.url "/") }}
 
-                    {{ with $categoryMenu.Identifier }}
+                    {{ with $categoryMenu.identifier }}
                         <i class="{{ . }}">&nbsp;</i>
                     {{ end }}
                 {{ else }}

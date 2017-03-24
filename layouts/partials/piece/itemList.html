@@ -1,11 +1,11 @@
 <ul>
     {{- range . }}
         <li>
-            <a href="{{ .URL }}">
-                {{ with .Identifier -}}
+            <a href="{{ .url }}">
+                {{ with .identifier -}}
                     <i class="{{ . }}">&nbsp;</i>
                 {{- end }}
-                {{ .Name }}
+                {{ .name }}
             </a>
         </li>
     {{- end }}

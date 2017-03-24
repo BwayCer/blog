@@ -8,7 +8,7 @@
     {{- end }}
 
     <nav class="links">
-        {{ partial "piece/itemList" .Site.Menus.main }}
+        {{ partial "piece/itemList" .Site.Data.main.menu.main }}
     </nav>
     <nav class="main">
         <ul>
@@ -38,7 +38,7 @@
 
     <!-- Links -->
         <section class="links">
-            {{ partial "piece/itemList" .Site.Menus.main }}
+            {{ partial "piece/itemList" .Site.Data.main.menu.main }}
         </section>
 
     <!-- Recent Posts -->
