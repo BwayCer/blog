@@ -1,0 +1,38 @@
+---
+- id: blog
+  translation: Blog
+- id: category
+  translation:  Tag
+- id: about
+  translation: About
+- id: share
+  translation: Share
+- id: search
+  translation: Search
+- id: recentPosts
+  translation: Recent Posts
+- id: viewMorePosts
+  translation: View more posts
+- id: continueReading
+  translation: Continue Reading
+- id: previousPage
+  translation: Previous Page
+- id: nextPage
+  translation: Next Page
+- id: readingTime
+  translation:
+    one: "Reading Time"
+    other: "{{ .Count }} minute read"
+- id: sharePost
+  translation: Share this post
+- id: email
+  translation: Email
+- id: googlePlus
+  translation: Google+
+- id: facebook
+  translation: Facebook
+- id: twitter
+  translation: Twitter
+- id: linkedin
+  translation: LinkedIn
+...

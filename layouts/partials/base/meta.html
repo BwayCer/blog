@@ -1,0 +1,22 @@
+
+{{ with .Params.author }}
+    <meta name="author" content="{{ . }}">
+{{ end }}
+{{ with .Description }}
+    <meta name="description" content="{{ . }}">
+{{ else }}
+    {{ with .Site.Params.description }}
+        <meta name="description" content="{{ . }}">
+    {{ end }}
+{{ end }}
+
+{{ "<!-- meta -->" | safeHTML }}
+{{ .Hugo.Generator }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{- "<!-- meta -->" | safeHTML }}
+{{ template "_internal/twitter_cards.html" . }}
+
+{{ template "_internal/google_news.html" . }}
+{{- "<!-- meta -->" | safeHTML -}}
+

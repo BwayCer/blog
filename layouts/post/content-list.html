@@ -1,0 +1,14 @@
+
+<article class="post">
+    {{ .Render "header" }}
+    {{ .Render "featured" }}
+    <p>{{ printf "%s" .Summary | truncate 250 " ..." | markdownify }}</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="{{ .Permalink }}" class="button big">{{ i18n "continueReading" }}</a></li>
+        </ul>
+        {{ .Render "footer-category" }}
+    </footer>
+</article>
+

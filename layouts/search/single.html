@@ -1,0 +1,28 @@
+{{- $.Scratch.Add "siteTitle" (i18n "search") }}
+{{- $.Scratch.Add "siteTitle" " - " }}
+{{- $.Scratch.Add "siteTitle" .Site.Title }}
+
+{{- $.Scratch.Set "assetSection" "search" }}
+
+
+{{- partial "piece/header" . }}
+    {{- partial "piece/navbar" . }}
+
+    <!-- Main -->
+    <div id="main">
+        <script>
+          (function() {
+            var cx = '010032797093521831155:decgntvx36i';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </div>
+
+{{- partial "piece/footer" . -}}
+

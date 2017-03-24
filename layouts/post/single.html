@@ -1,0 +1,18 @@
+{{- $.Scratch.Set "assetSection" "article" }}
+
+
+{{- partial "piece/header" . }}
+    {{- $.Scratch.Set "shareNav" true }}
+    {{- partial "piece/navbar" . }}
+    {{ partial "piece/shareMenu" . }}
+
+    <!-- Main -->
+    <div id="main">
+        <!-- Post -->
+        {{ $.Scratch.Set "h1" true }}
+        {{ .Render "content-single" }}
+    </div>
+
+    {{- partial "piece/sidebar" . }}
+{{- partial "piece/footer" . -}}
+

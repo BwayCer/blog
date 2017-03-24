@@ -1,15 +1,22 @@
 ---
+isDeveloper  : true
+
 ## 網站資訊
 
 baseURL       : https://bwaycer.github.io/blog/
 languageCode  : zh
 title         : 第二方案
 
+# 多國語系製作相對複雜（上下頁），建議不使用
 languages:
     zh:
         title: 第二方案
     en:
         title: B.Way
+
+
+## 主題
+# https://github.com/jpescador/hugo-future-imperfect
 
 
 ## 開發設定值
@@ -38,4 +45,38 @@ defaultContentLanguageInSubdir        : false
 enableMissingTranslationPlaceholders  : false
 
 relativeURLs : true
+
+
+## 主題預設值
+
+preserveTaxonomyNames: true
+paginate: 3
+disqusShortname: shortname
+googleAnalytics: ""
+
+params:
+
+    # `meta` 元素標籤的描述，當內容頁無值時使用的預設描述
+    description          : 希望我的旅途，能引領你翱翔，或許默默贊同，或許熱烈迴響。
+
+    # 是否顯示預估閱讀時間（`ReadingTime` 由 Hogo 內建，好特別的功能）
+    includeReadingTime   : true
+
+
+# 設定導覽行的項目
+# 其允許在文字前添加個 font awesome 圖示字型
+
+menu:
+
+    main:
+
+        - name       : 關於我
+          identifier : fa fa-user-o
+          url        : https://bwaycer.github.io/about
+          weight     : 1
+
+        - name       : 標籤
+          identifier : fa fa-tags
+          url        : /categories
+          weight     : 2
 ...

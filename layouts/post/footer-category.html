@@ -1,0 +1,35 @@
+
+<ul class="stats">
+    {{ if isset .Params "categories" }}
+        {{ $categoryCount := (len .Params.categories) }}
+
+        <!--
+            Set the title before displaying the categories associated with this post.
+            The title will use the variables from the Categories menu set in the Config.
+            If the Categories menu was not set then use the default values instead.
+        -->
+        {{ if ge $categoryCount 1 }}
+            <li>
+                {{ $categoryMenu := (where .Site.Menus.main "Name" (i18n "category") ) }}
+                {{ if ne (len $categoryMenu) 0 }}
+                    {{ $categoryMenu := index $categoryMenu 0 }}
+
+                    {{ $.Scratch.Set "categoryUrl" (add $categoryMenu.URL "/") }}
+
+                    {{ with $categoryMenu.Identifier }}
+                        <i class="{{ . }}">&nbsp;</i>
+                    {{ end }}
+                {{ else }}
+                    {{ $.Scratch.Set "categoryUrl" "/categories/" }}
+                {{ end }}
+                {{ i18n "category" }}
+            </li>
+        {{ end }}
+    {{ end }}
+
+    <!-- Display the categories associated with this post -->
+    {{ range .Params.categories }}
+        <li><a href='{{ add ($.Scratch.Get "categoryUrl") . | urlize }}'>{{ . }}</a></li>
+    {{ end }}
+</ul>
+

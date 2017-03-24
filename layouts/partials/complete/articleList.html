@@ -1,0 +1,21 @@
+{{- partial "piece/header" . }}
+    {{- partial "piece/navbar" . }}
+    <!-- Main -->
+    <div id="main">
+        <!-- 請注意！ `orderByPublishDate` 參數不在被使用。
+             因為其分頁無法預期，使用請自行評估風險！ -->
+        {{- if .Site.Data.main.orderByPublishDate }}
+            {{- $paginator := .Paginate (where .Data.Pages.ByPublishDate.Reverse "Type" "post") }}
+        {{- else }}
+            {{- $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+        {{- end }}
+
+        {{- range .Paginator.Pages }}
+            {{ .Render "content-list" }}
+        {{- end }}
+
+        {{ partial "piece/pagination" . }}
+    </div>
+    {{- partial "piece/sidebar" . }}
+{{- partial "piece/footer" . -}}
+

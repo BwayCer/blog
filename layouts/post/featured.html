@@ -1,0 +1,6 @@
+{{- if .Params.featured }}
+    <a href="{{ .Permalink }}" class="image featured">
+        <img src="{{ .Params.featured }}" alt="{{ .Params.featuredalt }}" />
+    </a>
+{{- end -}}
+

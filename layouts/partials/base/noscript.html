@@ -1,0 +1,8 @@
+{{- $dataAssets := .Site.Data.assets }}
+
+<noscript>
+    {{- range $dataAssets.noscriptCSS }}
+        <link rel="stylesheet" href="{{ $dataAssets.defaultPath.noscriptCSS }}/{{ . }}" />
+    {{- end }}
+</noscript>
+
