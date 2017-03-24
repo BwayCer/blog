@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on 第二方案</title>
+    <link>https://bwaycer.github.io/blog/article/index.xml</link>
+    <description>Recent content in Articles on 第二方案</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 22 Mar 2017 17:42:57 +0800</lastBuildDate>
+    <atom:link href="https://bwaycer.github.io/blog/article/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>第一筆雨果</title>
+      <link>https://bwaycer.github.io/blog/article/hello_hugo/</link>
+      <pubDate>Wed, 22 Mar 2017 17:42:57 +0800</pubDate>
+      
+      <guid>https://bwaycer.github.io/blog/article/hello_hugo/</guid>
+      <description>
+
+&lt;h2 id=&#34;尋找我的部落格&#34;&gt;尋找我的部落格&lt;/h2&gt;
+
+&lt;p&gt;好想分享自己的心情，因為我的每天一定要過的精彩。
+部落格？ 不不不，既然身為一個碼農，那當然農場要自己蓋囉！&lt;/p&gt;
+
+&lt;p&gt;問： 如果有農場要種什麼草、孵什麼蛋好呢？&lt;br&gt;
+答： 你奇丁嗎？ 我這麼個異類當然是要推廣邪教啦！&lt;/p&gt;
+
+&lt;p&gt;畏畏縮縮的，我不要再漠視和我不同理想的性格共存，我不要分裂的人生。
+勇敢去體會情緒、勇敢去表達理想。
+「傻笑是種單純，幼稚是種滿足」，
+這都是我的優點，至於別人的眼光，管它的。&lt;/p&gt;
+
+&lt;p&gt;生命無常，青春短暫，把時間浪費在美好的事物上吧！
+不要再為追逐而追逐，那是沒有盡頭的。&lt;/p&gt;
+
+&lt;p&gt;說到這，我這美好的人生怎麼讓你嚮往？ 怎麼去推廣我的邪教？&lt;br&gt;
+那當然就是我的「內容農場」！
+這兒沒有很好的文采，但有不同與你的人生。&lt;/p&gt;
+
+&lt;h2 id=&#34;你好-雨果&#34;&gt;你好 雨果&lt;/h2&gt;
+
+&lt;p&gt;很早之前就知道 &lt;a href=&#34;https://github.com/&#34;&gt;輯倉儲中心&lt;/a&gt;
+有提供 &lt;a href=&#34;https://pages.github.com/&#34;&gt;輯頁面&lt;/a&gt; 的免費空間，但由於是靜態頁展示而放棄。
+直至看到
+&lt;a href=&#34;https://github.com/yaml/www.yaml.io&#34;&gt;yaml/www.yaml.io - GitHub&lt;/a&gt;
+才知道輯頁面並非完全靜態網站，並且可靠
+&lt;a href=&#34;https://jekyllrb.com/&#34;&gt;jekyll&lt;/a&gt;
+工具協助創建，不過由於不熟 &lt;a href=&#34;https://www.ruby-lang.org/zh_tw/&#34;&gt;寶石&lt;/a&gt; 語言而又找到了
+&lt;a href=&#34;https://gohugo.io/&#34;&gt;雨果&lt;/a&gt; 。&lt;/p&gt;
+
+&lt;p&gt;一開始以為是遵守輯頁面的「動態」規則而瞎忙了許久，
+原來它是需編譯的，編譯後是一個完整的靜態網站。
+也為了方便而去下載 &lt;a href=&#34;https://bwaycer.github.io/hugo_tutorial.hugo/overview/introduction/&#34;&gt;官方文件&lt;/a&gt;
+邊看邊翻譯，好方便以後不走回頭路。&lt;/p&gt;
+
+&lt;p&gt;弄了十二天終於有基礎的網站了，我身為碼農後第一個個人網站。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
