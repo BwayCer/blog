@@ -1,0 +1,34 @@
+
+<ul class="stats">
+    {{ if isset .Params "categories" }}
+        {{ $categoryCount := (len .Params.categories) }}
+
+        <!--
+            文章的 `categories` 關聯設定。
+            若未在 `.Site.Data.main` 裡設置 `categories` 選項將使用預設值。
+        -->
+        {{ if ge $categoryCount 1 }}
+            <li>
+                {{ $categoryMenu := (where .Site.Data.main.menu.main "name" (i18n "category") ) }}
+                {{ if ne (len $categoryMenu) 0 }}
+                    {{ $categoryMenu := index $categoryMenu 0 }}
+
+                    {{ $.Scratch.Set "categoryUrl" (add $categoryMenu.url "/") }}
+
+                    {{ with $categoryMenu.identifier }}
+                        <i class="{{ . }}">&nbsp;</i>
+                    {{ end }}
+                {{ else }}
+                    {{ $.Scratch.Set "categoryUrl" "/categories/" }}
+                {{ end }}
+                {{ i18n "category" }}
+            </li>
+        {{ end }}
+    {{ end }}
+
+    <!-- Display the categories associated with this post -->
+    {{ range .Params.categories }}
+        <li><a href='{{ add ($.Scratch.Get "categoryUrl") . | urlize }}'>{{ . }}</a></li>
+    {{ end }}
+</ul>
+

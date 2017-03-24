@@ -1,0 +1,72 @@
+<!-- Sidebar -->
+<section id="sidebar">
+
+    <!-- Intro -->
+        <section id="intro">
+            {{- $pic := .Site.Data.main.intro.pic }}
+            {{- with $pic.src }}
+                {{- if $pic.circle }}
+                    <img src="{{ . }}" class="intro-circle" width="{{ $pic.width }}" alt="{{ $pic.alt }}" />
+                {{- else if $pic.imperfect }}
+                    <a href="/" class="logo"><img src="{{ . }}" alt="{{ $pic.alt }}" /></a>
+                {{- else }}
+                    <img src="{{ . }}" width="{{ $pic.width }}" alt="{{ $pic.alt }}" />
+                {{- end }}
+            {{- end }}
+            {{- with .Site.Data.main.intro }}
+                <header>
+                    <h2>{{ .header }}</h2>
+                    <p>{{ .paragraph | safeHTML }}</p>
+                </header>
+            {{- end }}
+            {{- if .Site.Data.main.socialAppearAtTop }}
+                {{ partial "extra/social" . }}
+            {{- end }}
+        </section>
+
+    <!-- Posts List -->
+        <section id="recent-posts">
+            {{ partial "piece/recentPosts" . }}
+        </section>
+
+    <!-- This if statement only applies if someone goes to the /categories url -->
+    <!-- Otherwise this section is shown for all other links -->
+    {{- if ne ($.Scratch.Get "showCategories") false }}
+    <!-- Categories List -->
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">{{ i18n "category" }}</a></h3>
+                </header>
+
+                {{ partial "piece/categorie" . }}
+            </ul>
+        </section>
+    {{- end }}
+
+    <!-- About -->
+        {{- with .Site.Data.main.intro }}
+            {{- if .about }}
+                <section class="blurb">
+                    <h2>About</h2>
+                    <p>{{ .about }}</p>
+
+                    {{- if .aboutUrl }}
+                        <ul class="actions">
+                            <li><a href="{{ .aboutUrl }}" class="button">Learn More</a></li>
+                        </ul>
+                    {{- end }}
+                </section>
+            {{- end }}
+        {{- end }}
+
+    <!-- Footer -->
+        <section id="footer">
+            {{- if .Site.Data.main.socialAppearAtBottom }}
+                {{ partial "extra/social" . }}
+            {{- end }}
+
+            <p class="copyright">&copy; {{ .Site.Title }}. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>

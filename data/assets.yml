@@ -1,0 +1,52 @@
+---
+defaultPath:
+    favicon      : /assets/favicon/
+    noscriptCSS  : /assets/css/
+    css          : /assets/css/
+    js           : /assets/js/
+
+# 網站圖標
+favicon:
+    ico: s128.ico
+    png: s128.png
+
+# 禁用腳本下的樣式
+noscriptCSS:
+    - noscript.css
+
+# 全站共享
+siteShare:
+    css:
+        - reset.css
+        - add-on.css
+        - font-awesome.min.css
+        - main.css
+        - monokai-sublime.css
+    js:
+        - jquery.min.js
+        - skel.min.js
+        - util.js
+        - main.js
+        - backToTop.js
+        - highlight.pack.js
+
+# 客制化個別網站
+siteCustom:
+
+    home:
+        css: ~
+        js: ~
+
+    alone:
+        css: ~
+        js: ~
+
+    article:
+        css: ~
+        js: ~
+
+    search:
+        css:
+            - main.css
+        js: ~
+...

@@ -1,0 +1,101 @@
+---
+## 額外功能
+
+googleAnalytics: UA-93985618-1
+disqusShortname: bwayghpages
+
+
+# 顯示於導覽行左上角，作為回首頁的選項
+navbarTitle: 第二方案
+
+
+# 設定簡介，可選值，會顯示於側邊欄
+# 使用位置： theme/layouts/partials/sidebar.html
+
+intro:
+
+    header     : 第二方案
+    paragraph  : Hello, Chinese. こんにちは、中国語。 안녕하세요, 중국어. Сайн байна уу, Хятад хэл. 你好，中文。
+    # paragraph : 希望我的旅途，能引領你翱翔，或許默默贊同，或許熱烈迴響。
+    about      : ~
+    aboutUrl   : /about/
+
+
+    # 圖示，可選值，會顯示於側邊欄
+    # 建議寬度小於 100 像素
+
+    pic:
+        src       : ~ # "https://avatars3.githubusercontent.com/u/16593611"
+        # 外框修改為圓形、六角形（imperfect）或預設的四邊形
+        circle    : false
+        imperfect : true
+        width     : ~
+        alt       : ~
+
+
+
+# 設定導覽行的項目
+# 其允許在文字前添加個 font awesome 圖示字型
+
+menu:
+
+    main:
+
+        - name       : 關於我
+          identifier : fa fa-user-o
+          url        : https://bwaycer.github.io/about
+          weight     : 1
+
+        - name       : 標籤
+          identifier : fa fa-tags
+          url        : /categories
+          weight     : 2
+
+
+# 設定最新文章顯示數量，可選值，會顯示於側邊欄
+# 預設值： 5
+
+postAmount:
+    sidebar : 3
+
+
+# 標籤排序是否依數量，否則依字母
+categoriesByCount    : true
+
+
+# 個人社交媒體資訊，會顯示於側邊欄
+# 當 `socialAppearAtTop` 或 `socialAppearAtBottom` 設為 `true` 時啟用
+
+# 社交媒體是否出現於側邊欄
+socialAppearAtTop    : true
+socialAppearAtBottom : false
+
+social:
+
+    github          : "BwayCer" # //github.com/$Var
+    bitbucket       : ~ # //bitbucket.com/$Var
+    jsfiddle        : ~ # //jsfiddle.com/$Var
+    codepen         : ~ # //codepen.io/$Var
+    foursquare      : ~ # //foursquare.com/$Var
+    dribbble        : ~ # //dribbble.com/$Var
+    deviantart      : ~ # //$Var.deviantart.com/$Var
+    behance         : ~ # //behance.net/$Var
+    flickr          : ~ # //flickr.com/photos/$Var
+    instagram       : ~ # //instagram.com/$Var
+    youtube         : ~ # //youtube.com/$Var
+    vimeo           : ~ # //vimeo.com/ $Var
+    vine            : ~ # //vine.co/$Var
+    medium          : ~ # //medium.com/@$Var
+    wordpress       : ~ # //$Var.wordpress.com
+    tumblr          : ~ # //$Var.tumblr.com
+    xing            : ~ # //xing.com/profile/$Var
+    linkedin        : ~ # //linkedin.com/in/$Var
+    slideshare      : ~ # //slideshare.com/$Var
+    stackoverflow   : ~ # //stackoverflow.com/users/$Var
+    reddit          : ~ # //reddit.com/user/$Var
+    pinterest       : ~ # //pinterest.com/$Var
+    googleplus      : ~ # //plus.google.com/+$Var
+    facebook        : ~ # //facebook.com/$Var
+    twitter         : ~ # //twitter.com/$Var
+    email           : ~ # mailto:$Var
+...

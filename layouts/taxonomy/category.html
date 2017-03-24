@@ -1,0 +1,24 @@
+{{- $.Scratch.Add "siteTitle" (i18n "category") }}
+{{- $.Scratch.Add "siteTitle" " : " }}
+{{- $.Scratch.Add "siteTitle" .Title }}
+{{- $.Scratch.Add "siteTitle" " - " }}
+{{- $.Scratch.Add "siteTitle" .Site.Title }}
+
+{{- $.Scratch.Set "assetSection" "alone" }}
+
+
+{{- partial "piece/header" . }}
+    {{- partial "piece/navbar" . }}
+    <!-- Main -->
+    <div id="main">
+        <h1>{{ .Title }}</h1>
+        {{- $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+        {{- range $paginator.Pages }}
+            {{ .Render "content-list" }}
+        {{- end }}
+
+        {{- partial "piece/pagination" . }}
+    </div>
+    {{- partial "piece/sidebar" . }}
+{{- partial "piece/footer" . -}}
+

@@ -1,0 +1,23 @@
+{{- $.Scratch.Add "siteTitle" (i18n "category") }}
+{{- $.Scratch.Add "siteTitle" " - " }}
+{{- $.Scratch.Add "siteTitle" .Site.Title }}
+
+{{- $.Scratch.Set "assetSection" "alone" }}
+
+
+{{- partial "piece/header" . }}
+    {{- partial "piece/navbar" . }}
+    <!-- Main -->
+    <div id="main">
+        <ul class="posts">
+            <header>
+                <h1>{{ i18n "category" }}</h1>
+            </header>
+            {{ partial "piece/categorie" . }}
+        </ul>
+    </div>
+
+    {{- $.Scratch.Set "showCategories" false }}
+    {{- partial "piece/sidebar" . }}
+{{- partial "piece/footer" . -}}
+

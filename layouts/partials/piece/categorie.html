@@ -1,0 +1,17 @@
+{{- if .Site.Data.main.categoriesByCount }}
+    {{- $.Scratch.Set "categories" .Site.Taxonomies.categories.ByCount }}
+{{- else }}
+    {{- $.Scratch.Set "categories" .Site.Taxonomies.categories.Alphabetical }}
+{{- end }}
+
+{{- range $key, $value := $.Scratch.Get "categories" }}
+    <li>
+        <article>
+            <header>
+                <a href="/categories/{{ $value.Name }}/">{{ $value.Name }}</a>
+                <span style="float:right;">{{ $value.Count }}</span>
+            </header>
+        </article>
+    </li>
+{{- end -}}
+

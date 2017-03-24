@@ -1,0 +1,38 @@
+---
+- id: blog
+  translation: 網誌
+- id: category
+  translation:  標籤
+- id: about
+  translation: 關於我
+- id: share
+  translation: 分享
+- id: search
+  translation: 搜尋
+- id: recentPosts
+  translation: 最新發布
+- id: viewMorePosts
+  translation: 查閱更多
+- id: continueReading
+  translation: 繼續閱讀
+- id: previousPage
+  translation: 上一頁
+- id: nextPage
+  translation: 下一頁
+- id: readingTime
+  translation:
+    one: "閱讀時間"
+    other: "文長 {{ .Count }} 分鐘"
+- id: sharePost
+  translation: 分想此篇文章
+- id: email
+  translation: 信箱
+- id: googlePlus
+  translation: 谷歌＋
+- id: facebook
+  translation: 臉書
+- id: twitter
+  translation: 推特
+- id: linkedin
+  translation: 領英
+...

@@ -1,0 +1,26 @@
+<article class="post">
+    {{ .Render "header" }}
+
+    <section id="social-share">
+        <ul class="icons">
+            {{ partial "extra/shareLink" . }}
+        </ul>
+    </section>
+
+    {{ .Render "featured" }}
+    <div id="content">
+        {{ .Content }}
+    </div>
+
+    <footer>
+        {{ .Render "footer-category" }}
+    </footer>
+</article>
+{{ .Render "prev-next" }}
+
+{{- if ne .Site.Params.isDeveloper true }}
+    <article class="post">
+        {{ partial "extra/disqus.html" . }}
+    </article>
+{{- end -}}
+
